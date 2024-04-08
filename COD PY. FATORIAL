@@ -1,0 +1,28 @@
+def fatorial_recursiva(n):
+    # Caso base: se n for 0 ou 1, o fatorial é 1
+    if n == 0 or n == 1:
+        return 1
+    # Caso recursivo: fatorial de n é n multiplicado pelo fatorial de n-1
+    else:
+        return n * fatorial_recursiva(n-1)
+
+# Exemplo de uso:
+numero = 5
+resultado = fatorial_recursiva(numero)
+print(f'O fatorial de {numero} é: {resultado}')
+
+
+#No exemplo fornecido no código, assumimos que queremos calcular o fatorial de 5.
+#Chamamos a função fatorial_recursiva(5).
+#fatorial_recursiva(5) = 5 * fatorial_recursiva(4)
+#fatorial_recursiva(4) = 4 * fatorial_recursiva(3)
+#fatorial_recursiva(3) = 3 * fatorial_recursiva(2)
+#fatorial_recursiva(2) = 2 * fatorial_recursiva(1)
+#fatorial_recursiva(1) = 1 (caso base)
+#A função retorna os valores para cima, multiplicando-os:
+#fatorial_recursiva(1) = 1
+#fatorial_recursiva(2) = 2 * 1 = 2
+#fatorial_recursiva(3) = 3 * 2 = 6
+#fatorial_recursiva(4) = 4 * 6 = 24
+#fatorial_recursiva(5) = 5 * 24 = 120
+#Portanto, o fatorial de 5 é 120.
